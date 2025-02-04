@@ -81,12 +81,17 @@ export default function Quests() {
             />
             <Select
               selectedOption={selectedDifficulty}
-              onChange={({ detail }) => setSelectedDifficulty(detail.selectedOption)}
+              onChange={({ detail }) => {
+                if (detail.selectedOption?.label && detail.selectedOption?.value) {
+                  setSelectedDifficulty({
+                    label: detail.selectedOption.label,
+                    value: detail.selectedOption.value,
+                  });
+                }
+              }}
               options={[
                 { label: "All", value: "all" },
                 { label: "Beginner", value: "Beginner" },
-                { label: "Intermediate", value: "Intermediate" },
-                { label: "Advanced", value: "Advanced" },
               ]}
             />
           </SpaceBetween>
