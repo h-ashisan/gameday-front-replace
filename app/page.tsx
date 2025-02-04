@@ -10,7 +10,6 @@ import Profile from "./profile"
 import Settings from "./settings"
 
 export default function Home() {
-  const router = useRouter()
   const [currentPage, setCurrentPage] = React.useState("dashboard")
 
   React.useEffect(() => {
