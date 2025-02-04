@@ -69,15 +69,21 @@ export default function Settings() {
               <ColumnLayout columns={2} variant="text-grid">
                 <SpaceBetween size="l">
                   <FormField label="Theme">
-                    <Select
-                      selectedOption={theme}
-                      onChange={({ detail }) => setTheme(detail.selectedOption)}
-                      options={[
-                        { label: "Light", value: "light" },
-                        { label: "Dark", value: "dark" },
-                        { label: "System", value: "system" },
-                      ]}
-                    />
+                  <Select
+                    selectedOption={theme}
+                    onChange={({ detail }) => {
+                      if (detail.selectedOption?.label && detail.selectedOption?.value) {
+                        setTheme({
+                          label: detail.selectedOption.label,
+                          value: detail.selectedOption.value,
+                        });
+                      }
+                    }}
+                    options={[
+                      { label: "Light", value: "light" },
+                      { label: "Dark", value: "dark" },
+                    ]}
+                  />
                   </FormField>
                   <FormField
                     label="Email Notifications"
