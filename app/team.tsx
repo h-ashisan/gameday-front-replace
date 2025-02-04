@@ -71,7 +71,7 @@ export default function Team() {
               <Box textAlign="center" color="inherit">
                 <b>No team members</b>
                 <Box padding={{ bottom: "s" }} variant="p" color="inherit">
-                  Your team doesn't have any members yet.
+                  Your team doesnt have any members yet.
                 </Box>
                 <Button>Invite team members</Button>
               </Box>

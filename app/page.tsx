@@ -1,7 +1,6 @@
 "use client"
 
 import React from "react"
-import { useRouter } from "next/navigation"
 import Dashboard from "./dashboard"
 import Quests from "./quests"
 import Leaderboard from "./leaderboard"
